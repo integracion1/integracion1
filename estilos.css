@@ -1,0 +1,58 @@
+
+
+body{
+
+	margin: 0;
+	background: #A59E9E;
+	font-family: Helvetica;
+}
+
+h1 {
+	color: black;
+	text-align: center;
+}
+
+.form_user{
+	background: grey;
+	border-radius: 8px;
+	margin: auto;
+	width: 90%;
+	max-width: 450px;
+
+}
+
+.form_titulo{
+	background: grey;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	font-weight: 100;
+	font-size: 30px; 3
+	border-radius: 8px;
+	border-bottom: solid;
+
+}
+
+.inputdetabla {
+	padding: 10px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+input{
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+.botonenv{
+	background: white;
+	color: black;
+	margin: auto;
+}
+
+select {
+	padding: 5px 10px;
+}
