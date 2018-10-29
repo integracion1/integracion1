@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2018 a las 23:10:47
+-- Tiempo de generación: 29-10-2018 a las 22:45:00
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.10
 
@@ -70,6 +70,28 @@ CREATE TABLE `empresa` (
   `Representante` varchar(40) NOT NULL,
   `RUN_Representante` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `Usuario` varchar(20) NOT NULL,
+  `Contraseña` varchar(20) NOT NULL,
+  `Privilegios` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`Usuario`, `Contraseña`, `Privilegios`) VALUES
+('Gerente', '', 1),
+('RRHH', '', 2),
+('Juridico', '', 3),
+('Informatico', '', 4);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
