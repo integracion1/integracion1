@@ -10,6 +10,7 @@ function validar() {
 	if(Usuario==roberto[0]){
 		if(Contraseña==roberto[1]){
 			alert("bienvenido usuario gerencia");
+			document.location.href=('Gerente y modelo/index.html');
 			return false;
 			
 		}
@@ -17,18 +18,21 @@ function validar() {
 	if(Usuario==rodrigo[0]){
 		if(Contraseña==rodrigo[1]){
 			alert("bienvenido usuario informatica");
+			document.location.href=('informatica/index.html');
 			return false;
 		}
 	}
 	if(Usuario==juan[0]){
 		if(Contraseña==juan[1]){
 			alert("bienvenido usuario juridico");
+			document.location.href=('juridico/index.html');
 			return false;
 		}
 	}
 	if(Usuario==cristian[0]){
 		if(Contraseña==cristian[1]){
 			alert("bienvenido usuario RRHH");
+			document.location.href=('RRHH/index.html');
 			return false;
 		}
 	}
