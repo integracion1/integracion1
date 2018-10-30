@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-10-2018 a las 18:03:30
+-- Tiempo de generación: 30-10-2018 a las 18:50:26
 -- Versión del servidor: 10.1.33-MariaDB
 -- Versión de PHP: 7.2.6
 
@@ -50,6 +50,8 @@ CREATE TABLE `empleado` (
   `Telefono` int(9) NOT NULL,
   `Fecha_Nac` date NOT NULL,
   `Salario` int(20) NOT NULL,
+  `AFP` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `SALUD` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
   `RUT_TRABAJADOR` varchar(10) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -84,14 +86,26 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Índices para tablas volcadas
 --
 
-INSERT INTO `usuarios` (`Usuario`, `Contraseña`, `Privilegios`) VALUES
-('Gerente', '', 1),
-('RRHH', '', 2),
-('Juridico', '', 3),
-('Informatico', '', 4);
+--
+-- Indices de la tabla `departamentos`
+--
+ALTER TABLE `departamentos`
+  ADD PRIMARY KEY (`Nombre_Dep`);
+
+--
+-- Indices de la tabla `empleado`
+--
+ALTER TABLE `empleado`
+  ADD PRIMARY KEY (`RUT_TRABAJADOR`);
+
+--
+-- Indices de la tabla `empresa`
+--
+ALTER TABLE `empresa`
+  ADD PRIMARY KEY (`RUT`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
