@@ -1,3 +1,5 @@
+
+
 function validar() {
 	var Usuario,Contraseña;
 	var roberto=["gerencia","gerencia"]
@@ -18,7 +20,7 @@ function validar() {
 	if(Usuario==rodrigo[0]){
 		if(Contraseña==rodrigo[1]){
 			alert("bienvenido usuario informatica");
-			document.location.href=('informatica/index.html');
+			document.location.href=('informatica/HomeInformatica.html');
 			return false;
 		}
 	}
@@ -46,3 +48,5 @@ function validar() {
 		return false;
 	}
 }
+
+
