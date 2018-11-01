@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-10-2018 a las 18:50:26
--- Versión del servidor: 10.1.33-MariaDB
--- Versión de PHP: 7.2.6
+-- Tiempo de generación: 01-11-2018 a las 15:27:05
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sirb_rem`
+-- Base de datos: `sirb`
 --
 
 -- --------------------------------------------------------
@@ -82,7 +82,8 @@ CREATE TABLE `empresa` (
 CREATE TABLE `usuarios` (
   `Usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `Contraseña` varchar(8) COLLATE utf8_spanish_ci NOT NULL,
-  `Privilegios` int(1) NOT NULL
+  `Privilegios` int(1) NOT NULL,
+  `Id_U` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -106,6 +107,12 @@ ALTER TABLE `empleado`
 --
 ALTER TABLE `empresa`
   ADD PRIMARY KEY (`RUT`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`Id_U`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
