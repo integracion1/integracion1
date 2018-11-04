@@ -1,8 +1,9 @@
 <?php
+
 	$servidor = "localhost";
 	$user = "root";
 	$password = "";
-	$basedato = "empresa";
+	$basedato = "sirb2";
 
 	$db=mysqli_connect($servidor,$user,$password,$basedato);
 
