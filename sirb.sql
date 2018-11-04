@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-11-2018 a las 05:32:21
+-- Tiempo de generación: 04-11-2018 a las 16:10:16
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.10
 
@@ -54,6 +54,17 @@ CREATE TABLE `empleado` (
   `SALUD` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
   `RUT_TRABAJADOR` varchar(10) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `empleado`
+--
+
+INSERT INTO `empleado` (`Nombre`, `Apellido_Pat`, `Apellido_Mat`, `Cargo`, `Direccion`, `Ciudad`, `Telefono`, `Fecha_Nac`, `Salario`, `AFP`, `SALUD`, `RUT_TRABAJADOR`) VALUES
+('Elvis', 'Torres', 'Toro', '', 'Calle Las Quilas 152', 'Renca', 987654321, '1992-07-17', 360000, 'HABITAT', '', '10990144-k'),
+('Eladio', 'Carter', 'Carrion', '', 'Avenida siempre viva 1010', 'Springfield', 987654321, '1990-01-15', 200000, 'PROVIDA', '', '17821123-9'),
+('Osvaldo', 'Duarte', 'Ahmed', '', 'Privada Ameur 192', 'Springfield', 986551436, '1981-02-09', 600000, 'PROVIDA', '', '20005125-4'),
+('Elsa', 'Soto', 'Lagos', '', 'Calle Las Araucarias 199', 'Colina', 987654321, '1990-05-15', 540000, 'HABITAT', '', '23595523-7'),
+('Gerardo', 'Lopez', 'Rodriguez', '', 'Preston Luke 442', 'Colina', 987654321, '1991-07-09', 390000, 'HABITAT', '', '6340768-2');
 
 -- --------------------------------------------------------
 
