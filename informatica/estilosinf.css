@@ -28,7 +28,7 @@
 		float: left; 
 		font-family: sans-serif;
 		text-align: left;
-		margin-left: 15px;
+		margin-left: 0px;
 	}
 	#dep{
 		float: right;
@@ -37,6 +37,7 @@
 	.titulo{
 		margin-top: 10px;
 		font-size: 30px;
+		margin-left: 20px;
 	}
 	.sub-titulo{
 		text-align: left;
@@ -44,10 +45,11 @@
 		margin-top: -20px;
 		padding-left: 0cm;
 		text-indent: 0cm;
+		margin-left: 10px;
 	}
 	.depinf{
 		font-size: 23px;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 	header h1{
 		float: left;
