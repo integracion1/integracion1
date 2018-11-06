@@ -1,0 +1,100 @@
+body{
+	background-image: url(BG/SIRBW.png);
+	background-attachment: fixed;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#menu {
+	text-align: center;
+	height: 30px;
+	width: 100%;
+	background-color: #006699;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+#menu ul { list-style-type: none; margin-top: 0px;}
+#menu ul li.nivel1 {
+	list-style: none;
+	float: left;
+	font-family: Arial;
+	font-size: 10pt;
+}
+#menu ul li a {
+	display: block;
+	text-decoration: none;
+	padding: 8px 50px;
+	border: 0px solid #ccc;
+	color: #fff; }
+#menu ul li:hover {
+	background: #fff;
+	color: black;
+	transition: background 0.5s, color 0.5s;;
+}
+#menu ul li a:hover, #menu ul li:hover a.nivel1 {
+	background-color: #6CC;
+	margin: auto;
+	color: #000;
+	position: relative;
+	transition: background 0.5s, color 0.5s;
+}
+#menu ul li a.nivel1 {
+	width: 100px;
+	display: block!important;
+	display: none;
+	position: relative;
+}
+#menu ul li ul {
+	display: none;
+	
+}
+#menu ul li a:hover ul, #menu ul li:hover ul {
+	display: block;
+	background: #006699;
+	color: black;
+	transition: background 0.5s, color 0.5s;
+}
+#menu ul li ul li a {
+	width: 100px;
+	padding: 5px 0px 10px 0px;
+	border-top-color: #000;
+}
+#menu ul li ul li a:hover {
+	border-top-color: #000;
+	background: #fff;
+	color: black;
+	transition: background 0.5s, color 0.5s;
+}
+table.falsa {
+	border-collapse:collapse;
+	border:0px;
+	float: left;
+	position: relative;
+}
+
+.salir ul{}
+
+.salir ul li{
+	list-style: none;
+	float: right;
+	font-family: Arial;
+	font-size: 10pt;
+	margin-right: 40px;
+
+}
+
+.salir ul li a{
+	text-decoration: none;
+	padding: 8px 20px;
+	border: 0px solid #ccc;
+	color: #fff; 
+}
+
+.salir ul li a:hover{
+	background: #fff;
+	color: black;
+	transition: background 0.5s, color 0.5s;
+}
