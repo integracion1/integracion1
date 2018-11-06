@@ -30,6 +30,10 @@
 		text-align: left;
 		margin-left: 15px;
 	}
+	#dep{
+		float: right;
+		margin-right: 40px;
+	}
 	.titulo{
 		margin-top: 10px;
 		font-size: 30px;
@@ -42,19 +46,28 @@
 		text-indent: 0cm;
 	}
 	.depinf{
-		font-size: 20px;
+		font-size: 23px;
 		margin-top: 10px;
 	}
 	header h1{
 		float: left;
 		font-size: 25px;
 	}
+	#linpal{
+		width: 1000px;
+		height: 45px;
+		background-color: #138BC7;
+		float: left;
+	}
 	#paleta li{
 		display:inline;
+		text-decoration: none;
+		border: 1px solid #006699;
+		padding: 10px 20px 10px 20px;
 	}
 	#paleta ul{
 		list-style:none;
-		margin-top: 25px;
+		margin-top: 0px;
 		padding:10px;
 		float: right;
 	}
@@ -62,7 +75,7 @@
 		color: #000;
 		font-size: 20px;
 		text-decoration: none;
-		padding: 25px;
+		padding: 5px;
 	}
 	#secc1, #secc2, #secc3, #secc4{
 		text-align: left;
@@ -113,7 +126,7 @@
 		display: block;
 		border-width: 5px;
 	}
-	p{
+	p, h3{
 		text-indent: 1cm;
 		padding-left: 1.5cm;
 		padding-right: 1.5cm;
