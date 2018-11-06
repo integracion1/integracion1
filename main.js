@@ -1,20 +1,20 @@
-jQuery(document).on('submit', '#', function(event){
+jQuery(document).on('submit', '#formlg', function(event){
 	event.preventDefault();
 
 jQuery.ajax({
-	url:'',
+	url:'main_app/login.php',
 	type:'POST',
 	dataType: 'json',
-	data: ,
+	data: $(this).serialize(),
 	beforeSend:function() {
 		
 	}
 })
 .done(function(respuesta) {
-	console.log("success");
+	console.log("respuesta");
 })
 .fail(function(resp) {
-	console.log("error");
+	console.log(resp.responseText);
 })
 .always(function(){
 	console.log("complete")
