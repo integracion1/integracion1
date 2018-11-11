@@ -2,15 +2,15 @@
 
 function validar() {
 	var Usuario,Contraseña;
-	var roberto=["gerencia","gerencia"]
+	/*var roberto=["gerencia","gerencia"]
 	var rodrigo=["informatica","informatica"]
 	var juan=["juridico","juridico"]
 	var cristian=["recursos","recursos"]
 	Usuario = document.getElementById('Usuario').value;
-	Contraseña = document.getElementById('Contraseña').value;
+	Contraseña = document.getElementById('Contraseña').value;*/
 	
-	if(Usuario==roberto[0]){
-		if(Contraseña==roberto[1]){
+	if(Usuario==$usuario){
+		if(Contraseña==$contraseña){
 			alert("bienvenido usuario gerencia");
 			document.location.href=('Gerente y modelo/index.html');
 			return false;
