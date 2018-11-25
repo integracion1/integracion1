@@ -1,0 +1,31 @@
+#Principal{
+	background: lightblue;
+	width: 1500px;
+	height:80px; 
+}
+#texto{
+	background: lightblue;
+	width: 400px;
+	height: 20px;
+}
+#direct{
+	 background: blue; 
+     border: none;
+     font-size: 20px;
+     
+     height: 5px;
+     padding:20px;
+     width: 1500px;
+}
+
+#casilla{
+	background: blue;
+	height: 1px;
+	padding: 20px;
+
+}
+#boton{
+	background: blue;
+	height: 20px; 
+	padding: 20px;
+}
