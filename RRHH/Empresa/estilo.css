@@ -2,11 +2,29 @@
 	background: lightblue;
 	width: 1500px;
 	height:80px; 
+	border-top-width: 5px;
+border-top-style: solid;
+border-right-width: 5px;
+border-right-style: solid;
+border-left-width: 5px;
+border-left-style: solid;
+border-bottom-width: 5px;
+border-bottom-style: solid;
+padding-left: 10px;
+width: 1335px;
 }
 #texto{
 	background: lightblue;
 	width: 400px;
-	height: 20px;
+	height: 35px;
+	border-top-width: 3px;
+border-top-style: solid;
+border-bottom-width: 3px;
+border-bottom-style: solid;
+border-right-width: 3px;
+border-right-style: solid;
+border-left-width: 3px;
+border-left-style: solid;
 }
 #direct{
 	 background: blue; 
@@ -16,16 +34,32 @@
      height: 5px;
      padding:20px;
      width: 1500px;
+     border-top-width: 1px;
+border-top-style: solid;
+border-left-width: 1px;
+border-left-style: solid;
+border-right-width: 1px;
+border-right-style: solid;
 }
 
 #casilla{
 	background: blue;
-	height: 1px;
+	height: 15px;
 	padding: 20px;
+	border-right-width: 1px;
+border-right-style: solid;
+border-left-width: 1px;
+border-left-style: solid;
 
 }
 #boton{
 	background: blue;
 	height: 20px; 
 	padding: 20px;
+	border-left-width: 1px;
+border-left-style: solid;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-right-width: 1px;
+border-right-style: solid;
 }
