@@ -4,6 +4,34 @@
 	<title> Edición de BD</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="estilosinf.css">
+	<script src="jQuery331.js"></script>
+	<script>
+		$(document).ready(Principal);
+
+		function Principal(){
+			$("#botonBa").click(Enviar);
+		}
+		function Enviar(){
+			$(document).ajaxStart(function() {
+    			$("#cargando").text("Cargando datos...");
+			});
+			$(document).ajaxComplete(function() {
+    			$("#cargando").text("");
+			});
+			var cod = document.getElementById('code').value;
+			$.ajax({
+				url:("Modifica.php?code="+cod),
+		        type: "GET",
+		        success:function(){
+		            	alert("Instruccion realizada");
+		        },
+		        error:function(){
+		        		alert("Error en la conexion con la BD");
+		        }
+		    });
+		}
+	</script>
+
 </head>
 
 <body>
@@ -37,13 +65,14 @@
 				<div class="Cont2">
 					<div class="VentCons">
 						<label for="code" class="formlabel">Redacta la consulta SQL: </label><br>
-						<textarea id="code" placeholder="Codigo SQL aquí" rows="13" cols="95"></textarea><br>
-						<input type="submit" value="Enviar" class="botonenv">
+						<textarea id="code" placeholder="Codigo SQL aquí" rows="13" cols="90"></textarea><br>
+						<button type="button" name="Enviar" id="botonBa">Enviar</button>
 			    	</div>
 		    	</div>
-
 			</section>
+
 			<hr>
+			
 			<footer>
 				<div id="logo">
 					<h2 class="titulo">SIRB</h2>

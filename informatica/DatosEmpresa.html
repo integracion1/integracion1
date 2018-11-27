@@ -13,7 +13,8 @@
 			$("#boton2").click(MostrarForm);
 			$("#boton3").click(OcultarForm2);
 			$("#boton4").click(MostrarForm2);
-			$("#Enviar").click(Enviar);
+			$("#botonE").click(Enviar);
+			$("#botonE2").click(Enviar2);
 		}
 
 		function OcultarForm(){
@@ -29,17 +30,27 @@
 			$(".formEm").slideDown("slow");
 		}
 		function Enviar(){
-			$(document).ajaxStart(function() {
-    			$("#cargando").text("Cargando datos...");
-			});
-			$(document).ajaxComplete(function() {
-    			$("#cargando").text("");
-			});
+			var u = document.getElementById('Usuario').value;
+			var r = document.getElementById('RUT').value;
+			var d = document.getElementById('Depa').value;
 			$.ajax({
-				url:"Consulta.php?marca="+document.getElementById('marca').value+"&age="+document.getElementById('age').value+"&precio1="+document.getElementById('precio1').value+"&precio2="+document.getElementById('precio2').value,
+				url:("Busqueda.php?Usuario="+u+"&RUT="+r+"&Depa="+d),
 		        type: "GET",
 		        success:function(datos){
-		            	$("#tabla").html(datos);
+		            	$("#resp").html(datos);
+		        },
+		        error:function(){
+		        		alert("Error en la conexion con la BD");
+		        }
+		    });
+		}
+		function Enviar2(){
+			var rz = document.getElementById('Razon').value;
+			$.ajax({
+				url:("Busqueda2.php?Razon="+rz),
+		        type: "GET",
+		        success:function(datos){
+		            	$("#resp").html(datos);
 		        },
 		        error:function(){
 		        		alert("Error en la conexion con la BD");
@@ -62,11 +73,6 @@
            	if(this.Depa.value == ""){
             	alert("El campo 'Departamento' no puede quedar vacio, el usuario debe figurar en un departamento");
             	this.Depa.focus();
-            	return false;
-           	}
-           	if(this.Sucursal.value == ""){
-            	alert("Es necesario que ingrese el nombre de la sucursal");
-            	this.Sucursal.focus();
             	return false;
            	}
            	return true;
@@ -111,7 +117,7 @@
 
 				<div class="Cont">
 					<div class="formUs">
-						<form class="form1" onsubmit="return Valida(this)">
+						<form class="form1">
 							<div class="form-header">
 								<h3 class="h3form">Buscar empleados</h3>
 							</div>
@@ -122,7 +128,7 @@
 							<label for="Depa" class="formlabel">Departamento: </label><br>
 							<input type="text" id="Depa" name="Departamento" placeholder="Departamento"><br>
 							<br>
-							<input type="submit" value="Buscar" class="botonenv">
+							<button type="button" id="botonE" name="Buscar">Buscar</button>
 						</form>
 			    	</div>
 			    	<button id="boton1">Ocultar Formulario</button>
@@ -135,16 +141,25 @@
 								<h3 class="h3form">Buscar Sucursal</h3>
 							</div>
 							<label for="Sucursal" class="formlabel">Sucursal: </label><br>
-							<input type="text" id="Sucursal" name="Sucursal" placeholder="Nombre Sucursal"><br>
+							<input type="text" id="Razon" name="Razon" placeholder="Razon Social"><br>
 							<br>
-							<input type="submit" value="Buscar" class="botonenv2">
+							<button type="button" id="botonE2" name="Buscar2">Buscar</button>
 						</form>
 			    	</div>
 			    	<button id="boton3">Ocultar Formulario</button>
 			    	<button id="boton4">Mostrar Formulario</button>
 		    	</div>
 			</section>
+			
 			<hr>
+			
+			<section id="secc2b">
+				<br>
+				<div id="resp"></div>
+			</section>
+			
+			<hr>
+
 			<footer>
 				<div id="logo">
 					<h2 class="titulo">SIRB</h2>
