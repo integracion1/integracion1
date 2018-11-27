@@ -1,0 +1,184 @@
+/*Estilos de homepage del departamento de informatica*/
+
+@media print{
+	body{
+		font-size: 14px;
+		background-color: white;
+		text-align: center;
+	}
+}
+
+@media screen{
+	body{
+		font-family: Helvetica;
+		font-size: 18px;
+		background-color: #E8E8E8;
+	}	
+	#paginaV{
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header{
+		background-color: #C1C2C6;
+		height: 100px;
+	}
+	#logo, #dep{
+		width: 200px;
+		height: 100px;
+		border: 0px solid #000;
+		float: left; 
+		font-family: sans-serif;
+		text-align: left;
+		margin-left: 0px;
+	}
+	#dep{
+		float: right;
+		margin-right: 40px;
+	}
+	.titulo{
+		margin-top: 10px;
+		font-size: 30px;
+		margin-left: 20px;
+	}
+	.sub-titulo{
+		text-align: left;
+		font-size: 14px;
+		margin-top: -20px;
+		padding-left: 0cm;
+		text-indent: 0cm;
+		margin-left: 10px;
+	}
+	.depinf{
+		font-size: 23px;
+		margin-top: 20px;
+	}
+	#linpal{
+		width: 1000px;
+		height: 45px;
+		background-color: #138BC7;
+		float: left;
+	}
+	#paleta li{
+		display:inline;
+		text-decoration: none;
+		border: 1px solid #006699;
+		padding: 10px 20px 10px 20px;
+	}
+	#paleta ul{
+		list-style:none;
+		margin-top: 0px;
+		padding:10px;
+		float: right;
+	}
+	#paleta a{
+		color: #000;
+		font-size: 20px;
+		text-decoration: none;
+		padding: 5px;
+	}
+	.h3form{
+		text-indent: 0cm;
+		padding-left: 0cm;
+	}
+	.formUs, .formEm{
+		background-color: #C1C2C6;
+		border: solid;
+		width: 350px;
+		height: 270px;
+	}
+	.form1, .form2{
+		margin-left: 30px;
+	}
+	.formlabel{
+		font-size: 14px;
+	}
+	.Cont{
+		margin-left: 2.5cm;
+		width: 360px;
+		height: 290px;
+		float: left;
+	}
+	.Cont2, .VentCons{
+		width: 900px;
+		height: 280px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.VentCons{
+		border: solid;
+		width: 700px;
+		height: 260px;
+	}
+	#resp{
+		border: solid;
+		width: 800px;
+		height: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#secc1, #secc1b, #secc1ba, #secc2, #secc2b, #secc3, #secc4, #secc1c{
+		text-align: left;
+		background-color: #fff;
+		height: 350px;
+	}
+	#secc2{
+		background-color: #C1C2C6;
+	}
+	#secc2b{
+		height: 800px;
+	}
+	#secc4{
+		background-color: #C1C2C6;
+	}
+	#secc1b, #secc1c{
+		height: 380px;
+	}
+	#secc1ba{
+		height: 1000px;
+	}
+	#s2d1, #s3d1, #s4d1, #s2d2, #s3d2, #s4d2{
+		background-color: #E8E8E8;
+		width: 300px;
+		height: 300px;
+		overflow: hidden;
+		border: 1px solid #000;
+		float: left;
+		margin-left: 24px;
+		margin-top: 24px;
+	}
+	#s2d2, #s3d2, #s4d2{
+		width: 600px;
+		float: right;
+		margin-right: 24px;
+		text-indent: 2.5cm;
+	}
+	.leer-mas{
+		color: #000;
+		float: right;
+		text-decoration: none;
+		border: 1px solid #006699;
+		padding: 10px 20px 10px 0px;
+		margin-bottom: 10px;
+	}
+
+	footer{
+		background-color: #fff; /*#F39C12*/
+		float: center;
+		height: 100px;
+	}
+	footer #dep{
+		float: right;
+		margin-right: 25px;
+	}
+	hr{
+		display: block;
+		border-width: 5px;
+	}
+	p, h3{
+		text-indent: 1cm;
+		padding-left: 1.5cm;
+		padding-right: 1.5cm;
+		text-align: justify;
+	}
+}

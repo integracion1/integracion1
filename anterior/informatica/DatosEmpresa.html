@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Datos Generales</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilosinf.css">
+	<script src="jQuery331.js"></script>
+	<script>
+		$(document).ready(Principal);
+
+		function Principal(){
+			$("#boton1").click(OcultarForm);
+			$("#boton2").click(MostrarForm);
+			$("#boton3").click(OcultarForm2);
+			$("#boton4").click(MostrarForm2);
+			$("#botonE").click(Enviar);
+			$("#botonE2").click(Enviar2);
+		}
+
+		function OcultarForm(){
+			$(".formUs").slideUp("slow");
+		}
+		function MostrarForm(){
+			$(".formUs").slideDown("slow");
+		}
+		function OcultarForm2(){
+			$(".formEm").slideUp("slow");
+		}
+		function MostrarForm2(){
+			$(".formEm").slideDown("slow");
+		}
+		function Enviar(){
+			var u = document.getElementById('Usuario').value;
+			var r = document.getElementById('RUT').value;
+			var d = document.getElementById('Depa').value;
+			$.ajax({
+				url:("Busqueda.php?Usuario="+u+"&RUT="+r+"&Depa="+d),
+		        type: "GET",
+		        success:function(datos){
+		            	$("#resp").html(datos);
+		        },
+		        error:function(){
+		        		alert("Error en la conexion con la BD");
+		        }
+		    });
+		}
+		function Enviar2(){
+			var rz = document.getElementById('Razon').value;
+			$.ajax({
+				url:("Busqueda2.php?Razon="+rz),
+		        type: "GET",
+		        success:function(datos){
+		            	$("#resp").html(datos);
+		        },
+		        error:function(){
+		        		alert("Error en la conexion con la BD");
+		        }
+		    });
+		}
+	</script>
+	<script>
+	 	function Valida(miForm){
+           	if(this.Usuario.value == ""){
+            	alert("El campo 'Nombre' no puede quedar vacio");
+            	this.Usuario.focus();
+            	return false;
+           	}
+           	if(this.RUT.value == ""){
+            	alert("El campo 'RUT' no puede quedar vacio");
+            	this.RUT.focus();
+            	return false;
+           	}
+           	if(this.Depa.value == ""){
+            	alert("El campo 'Departamento' no puede quedar vacio, el usuario debe figurar en un departamento");
+            	this.Depa.focus();
+            	return false;
+           	}
+           	return true;
+       	}
+       	function Valida2(miForm){
+           	if(this.Sucursal.value == ""){
+            	alert("Es necesario que ingrese el nombre de la sucursal");
+            	this.Sucursal.focus();
+            	return false;
+           	}
+           	return true;
+       	}
+   	</script>
+</head>
+
+<body>
+		<article id="paginaV">
+			<header>
+				<div id="logo">
+					<h2 class="titulo">SIRB</h2>
+                    <p class="sub-titulo">Sistema informático de Remuneración Básico</p>
+				</div>
+				<div id="dep">
+					<h1 class="depinf">DEPARTAMENTO DE INFORMÁTICA</h1>
+				</div>
+				<div id="linpal">		
+					<nav id="paleta">
+					<ul>
+						<li><a href="HomeInformatica.html">Inicio</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="#">Documentos</a></li>
+						<li><a href="#">Clientes</a></li>
+						<li><a href="../index.html">Cerrar Sesión</a></li>
+					</ul>
+				</nav>
+				</div>
+			</header>
+			<hr>
+			<section id="secc1b">
+				<hr>
+				<h3>Datos generales de la empresa y usuarios</h3>
+
+				<div class="Cont">
+					<div class="formUs">
+						<form class="form1">
+							<div class="form-header">
+								<h3 class="h3form">Buscar empleados</h3>
+							</div>
+							<label for="Usuario" class="formlabel">Nombre: </label><br>
+							<input type="text" id="Usuario" name="Usuario" placeholder="Nombre Usuario"><br>
+							<label for="RUT" class="formlabel">RUT: </label><br>
+							<input type="text" id="RUT" name="RUT" placeholder="RUT"><br>
+							<label for="Depa" class="formlabel">Departamento: </label><br>
+							<input type="text" id="Depa" name="Departamento" placeholder="Departamento"><br>
+							<br>
+							<button type="button" id="botonE" name="Buscar">Buscar</button>
+						</form>
+			    	</div>
+			    	<button id="boton1">Ocultar Formulario</button>
+			    	<button id="boton2">Mostrar Formulario</button>
+		    	</div>
+		    	<div class="Cont">
+			    	<div class="formEm">
+						<form class="form2" onsubmit="return Valida2(this)">
+							<div class="form-header">
+								<h3 class="h3form">Buscar Sucursal</h3>
+							</div>
+							<label for="Sucursal" class="formlabel">Sucursal: </label><br>
+							<input type="text" id="Razon" name="Razon" placeholder="Razon Social"><br>
+							<br>
+							<button type="button" id="botonE2" name="Buscar2">Buscar</button>
+						</form>
+			    	</div>
+			    	<button id="boton3">Ocultar Formulario</button>
+			    	<button id="boton4">Mostrar Formulario</button>
+		    	</div>
+			</section>
+			
+			<hr>
+			
+			<section id="secc2b">
+				<br>
+				<div id="resp"></div>
+			</section>
+			
+			<hr>
+
+			<footer>
+				<div id="logo">
+					<h2 class="titulo">SIRB</h2>
+                    <p class="sub-titulo">Sistema informatico de Remuneración Basico</p>
+				</div>
+				<div id="dep">
+					<h1 class="depinf">DEPARTAMENTO DE INFORMÁTICA</h1>
+				</div>
+			</footer>
+		</article>
+</body>
+</html>

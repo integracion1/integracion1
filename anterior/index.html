@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+	<meta charset="utf-8">
+	<title>SIRB - Acceder</title>
+	<script type="text/javascript" src="SISTEMA/jquery331.js"></script>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<script>
+		$(document).ready(Principal);
+
+	function Principal(){
+		$("#InicSec").click(Validar);
+	}
+
+	function Validar() {
+		alert("holas");
+	}
+	</script>
+</head>
+<body>
+	<h1>S.I.R.B.</h1>
+	<h2>Sistema Informático de Remuneraciones Basico</h2>
+	<form  class="form_user">
+		<h2 class="form_titulo">Ingrese Nombre de Usuario</h2>
+		<div class="inputdetabla">
+			<input type="text" id="Usuario" name="Usuario" placeholder="Usuario" > 
+			<input type="password" id="Contraseña" name="Contraseña" placeholder="Contraseña">
+			<!--<input type="submit" value="Iniciar Sesión" class="botonenv">-->
+			<button id="InicSec">Iniciar Sesión</button>
+    	</div>
+	</form>
+</body>
+</html>

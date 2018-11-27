@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="StyleEm.css">
+	<title>Sistema de Remuneraciones</title>
+	<script type="text/javascript" src="jquery331.js"></script>
+	<script>
+		$(document).ready(Principal);
+     
+	    function Principal(){
+        $("#me").click(MostEmp);
+        $("#ae").click(MostForm);
+        $("#ans").click(AgreSuc);
+        $("#el").click(MostInp);
+        $("#del").click(ElimSuc);
+    	}
+
+    	function MostEmp(){
+    		$("#table").fadeToggle("fast");
+    		$.ajax({
+        	url: "MuestraEmp.php",
+        	success: function(datos){
+                        $("#table").html(datos);
+            }
+            });
+    	}
+
+    	function MostForm(){
+    		$("#ingresar").fadeToggle("fast");
+    	}
+
+    	function AgreSuc(){
+    		var a = document.getElementById('NumSuc').value;
+    		var b = document.getElementById('RaSo').value;
+    		var c = document.getElementById('RUT').value;
+    		var d = document.getElementById('Giro').value;
+    		var e = document.getElementById('CodAct').value;
+    		var dir = document.getElementById('Direc').value;
+    		var f = document.getElementById('Suc').value;
+    		var g = document.getElementById('Rep').value;
+    		var h = document.getElementById('RUN').value;
+    		var i = document.getElementById('Caja').value;
+    		var j = document.getElementById('Mut').value;
+    		
+    		$.ajax({
+    			url: ("AgregEmp.php?NumSuc="+a+"&RaSo="+b+"&RUT="+c+"&Giro="+d+"&CodAct="+e+"&Direc="+dir+"&Suc="+f+"&Rep="+g+"&RUN="+h+"&Caja="+i+"&Mut="+j),
+    			success: function(){
+    				alert("Se Registro Una Nueva Sucursal Correctamente");
+    			}
+    		});
+    	}
+
+    	function MostInp(){
+    		$("#eliminador").fadeToggle("fast");
+    	}
+
+    	function ElimSuc(){
+    		var ns = document.getElementById('NSuc').value;
+    		$.ajax({
+    			url: ("ElimEmp.php?NSuc="+ns),
+    			success: function(){
+    				alert("Sucursal Eliminada Exitosamente");
+    			}
+    		});
+    	}
+	</script>
+</head>
+<body>
+	<div id="barra_menu">
+		<nav class="menu">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="cuenta.html">Archivo</a></li>
+			<li><a href="empresas.html">Empresas</a></li>
+		</ul>
+	</nav>
+	<nav class="salir">
+		<ul>
+			<li><a href="../index.html">Salir</a></li>
+		</ul>
+	</nav><br><br><br>
+	<p id="ContBtn">
+		<button id="me">Mostrar Empresas</button>
+		<button id="ae">Añadir Sucursal</button>
+		<button id="el">Elimina Sucursal</button>
+	</p>
+	<div id="ingresar" style="display: none;">
+		<form>
+			<fieldset><legend>Agregar Nueva Sucursal</legend>
+				Num Sucursal: <br>
+				<input type="text" name="NumSuc" id="NumSuc"><br>
+				Razon Social: <br>
+				<input type="text" name="RaSo" id="RaSo"><br>
+				RUT: <br>
+				<input type="text" name="RUT" id="RUT"><br>
+				Giro: <br>
+				<input type="text" name="Giro" id="Giro"><br>
+				Codigo Actividad: <br>
+				<input type="text" name="CodAct" id="CodAct"><br>
+				Dirección: <br>
+				<input type="text" name="direc" id="Direc"><br>
+				Sucursal: <br>
+				<input type="text" name="Suc" id="Suc"><br>
+				Representante Legal: <br>
+				<input type="text" name="Rep" id="Rep"><br>
+				RUN Representante: <br>
+				<input type="text" name="RUN" id="RUN"><br>
+				Caja: <br>
+				<input type="text" name="Caja" id="Caja"><br>
+				Mutual: <br>
+				<input type="text" name="Mut" id="Mut"><br>
+				<button id="ans">Agregar Nueva Sucursal</button>
+			</fieldset>
+		</form>
+	</div>
+
+	<div id="table" style="display: none;"></div>	
+
+	<div id="eliminador" style="display: none;">
+		<input type="text" name="NSuc" id="NSuc">
+		<button id="del">Eliminar Sucursal</button>
+	</div>	
+</body>
+</html>

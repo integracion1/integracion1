@@ -1,0 +1,75 @@
+body{
+	/*background-image: url(BG/ONW.png);*/
+	background-color: #AEB7F9;
+	background-attachment: fixed;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#barra_menu{
+	height: 50px;
+	width: 100%;
+	background-color: #006699;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+.salir ul{}
+
+.salir ul li{
+	list-style: none;
+	float: right;
+	font-family: Arial;
+	font-size: 13pt;
+	margin-right: 40px;
+}
+
+.salir ul li a{
+	text-decoration: none;
+	padding: 8px 35px;
+	border: 0px solid #ccc;
+	color: #fff; 
+}
+
+.salir ul li a:hover{
+	background: #fff;
+	color: black;
+	transition: background 0.5s, color 0.5s;
+}
+
+.menu ul{}
+
+.menu ul li{
+	list-style: none;
+	float: left;
+	font-family: Arial;
+	font-size: 13pt;
+}
+
+.menu ul li a{
+	text-decoration: none;
+	padding: 8px 35px;
+	border: 0px solid #ccc;
+	color: #fff; 
+}
+
+.menu ul li a:hover{
+	background: #fff;
+	color: black;
+	transition: background 0.5s, color 0.5s;
+}
+
+#table {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	text-align: center;
+	background-color: white;
+	width: 1185px;
+}
+
+#ContBtn {
+	text-align: center;
+}

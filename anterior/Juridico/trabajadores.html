@@ -1,0 +1,32 @@
+
+<html>
+<head>
+  <title>Comentario Del Empleado</title>
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<div align="center">
+<h1 align="center"><font face="arial">Escriba los datos Correspondientes</font></h1>
+<body background="fondo2.jpg">
+  <h2><font face="arial"><b>Escriba de manera segura estos datos quedaran registrados en la BD</b></font></h2>
+  <h2><font face="arial"><b>Ingrese Los Datos</b></font></h2>      <!-- Este form es usado para inyectar datos en la BD, los cuales son los pedidos de libros-->
+</body>
+<form name="formulario" method="post" action="info.php">
+
+Nombre: <input type="text" name="Nombre" value=""> <br>
+<br>                                                      <!--Acá los datos requeridos....-->
+Rut: <input type="number" name="Rut" value=""> <br>
+<br>
+<textarea name="Comentarios" rows="10" cols="50" placeholder="Escriba algun comentario del Empleado..."></textarea>
+<br>
+<br>
+
+<input type="submit"/>
+
+</form>
+</div>
+<div align="center">
+<a href="quitar.html"> O si desea eliminar su comentario ingrese acá </a> <!-- ir a borrar datos --> 
+</html>
+
+
