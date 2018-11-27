@@ -13,17 +13,17 @@ $link = mysqli_connect("","","","") //A que  base de datos me conecto !! Bd,User
 
 
 // Realiza consulta
-$query = 'SELECT * FROM empleados ';
+$query = 'SELECT * FROM ';
 
 $resp = mysqli_query($link , $query) or die ('Consulta fallida: ' . mysql_error());
 
 echo "<table border='1'>";
   echo "<tr><td>Nombre</td>
-            <td>Rut</></tr>";
+            <td>Autor</></tr>";
 
   while($fila=mysqli_fetch_object($resp)) {
        echo "<tr><td>$fila->Nombre</td>
-                 <td>$fila->Rut</td></tr>";
+                 <td>$fila->Autor</td></tr>";
   }
 
 
