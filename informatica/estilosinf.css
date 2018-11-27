@@ -16,6 +16,8 @@
 	}	
 	#paginaV{
 		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	header{
 		background-color: #C1C2C6;
@@ -51,10 +53,6 @@
 		font-size: 23px;
 		margin-top: 20px;
 	}
-	header h1{
-		float: left;
-		font-size: 25px;
-	}
 	#linpal{
 		width: 1000px;
 		height: 45px;
@@ -79,7 +77,40 @@
 		text-decoration: none;
 		padding: 5px;
 	}
-	#secc1, #secc2, #secc3, #secc4{
+	.h3form{
+		text-indent: 0cm;
+		padding-left: 0cm;
+	}
+	.formUs, .formEm{
+		background-color: #C1C2C6;
+		border: solid;
+		width: 350px;
+		height: 270px;
+	}
+	.form1, .form2{
+		margin-left: 30px;
+	}
+	.formlabel{
+		font-size: 14px;
+	}
+	.Cont{
+		margin-left: 2.5cm;
+		width: 360px;
+		height: 290px;
+		float: left;
+	}
+	.Cont2, .VentCons{
+		width: 900px;
+		height: 280px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.VentCons{
+		border: solid;
+		width: 700px;
+		height: 260px;
+	}
+	#secc1, #secc2, #secc3, #secc4, #secc1b, #secc1c{
 		text-align: left;
 		background-color: #fff;
 		height: 350px;
@@ -89,6 +120,9 @@
 	}
 	#secc4{
 		background-color: #C1C2C6;
+	}
+	#secc1b, #secc1c{
+		height: 380px;
 	}
 	#s2d1, #s3d1, #s4d1, #s2d2, #s3d2, #s4d2{
 		background-color: #E8E8E8;
