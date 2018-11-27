@@ -4,10 +4,85 @@
 	<title> Datos Generales</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="estilosinf.css">
+	<script src="jQuery331.js"></script>
+	<script>
+		$(document).ready(Principal);
+
+		function Principal(){
+			$("#boton1").click(OcultarForm);
+			$("#boton2").click(MostrarForm);
+			$("#boton3").click(OcultarForm2);
+			$("#boton4").click(MostrarForm2);
+			$("#Enviar").click(Enviar);
+		}
+
+		function OcultarForm(){
+			$(".formUs").slideUp("slow");
+		}
+		function MostrarForm(){
+			$(".formUs").slideDown("slow");
+		}
+		function OcultarForm2(){
+			$(".formEm").slideUp("slow");
+		}
+		function MostrarForm2(){
+			$(".formEm").slideDown("slow");
+		}
+		function Enviar(){
+			$(document).ajaxStart(function() {
+    			$("#cargando").text("Cargando datos...");
+			});
+			$(document).ajaxComplete(function() {
+    			$("#cargando").text("");
+			});
+			$.ajax({
+				url:"Consulta.php?marca="+document.getElementById('marca').value+"&age="+document.getElementById('age').value+"&precio1="+document.getElementById('precio1').value+"&precio2="+document.getElementById('precio2').value,
+		        type: "GET",
+		        success:function(datos){
+		            	$("#tabla").html(datos);
+		        },
+		        error:function(){
+		        		alert("Error en la conexion con la BD");
+		        }
+		    });
+		}
+	</script>
+	<script>
+	 	function Valida(miForm){
+           	if(this.Usuario.value == ""){
+            	alert("El campo 'Nombre' no puede quedar vacio");
+            	this.Usuario.focus();
+            	return false;
+           	}
+           	if(this.RUT.value == ""){
+            	alert("El campo 'RUT' no puede quedar vacio");
+            	this.RUT.focus();
+            	return false;
+           	}
+           	if(this.Depa.value == ""){
+            	alert("El campo 'Departamento' no puede quedar vacio, el usuario debe figurar en un departamento");
+            	this.Depa.focus();
+            	return false;
+           	}
+           	if(this.Sucursal.value == ""){
+            	alert("Es necesario que ingrese el nombre de la sucursal");
+            	this.Sucursal.focus();
+            	return false;
+           	}
+           	return true;
+       	}
+       	function Valida2(miForm){
+           	if(this.Sucursal.value == ""){
+            	alert("Es necesario que ingrese el nombre de la sucursal");
+            	this.Sucursal.focus();
+            	return false;
+           	}
+           	return true;
+       	}
+   	</script>
 </head>
 
 <body>
-	<center>
 		<article id="paginaV">
 			<header>
 				<div id="logo">
@@ -30,9 +105,44 @@
 				</div>
 			</header>
 			<hr>
-			<section id="secc1">
+			<section id="secc1b">
 				<hr>
 				<h3>Datos generales de la empresa y usuarios</h3>
+
+				<div class="Cont">
+					<div class="formUs">
+						<form class="form1" onsubmit="return Valida(this)">
+							<div class="form-header">
+								<h3 class="h3form">Buscar empleados</h3>
+							</div>
+							<label for="Usuario" class="formlabel">Nombre: </label><br>
+							<input type="text" id="Usuario" name="Usuario" placeholder="Nombre Usuario"><br>
+							<label for="RUT" class="formlabel">RUT: </label><br>
+							<input type="text" id="RUT" name="RUT" placeholder="RUT"><br>
+							<label for="Depa" class="formlabel">Departamento: </label><br>
+							<input type="text" id="Depa" name="Departamento" placeholder="Departamento"><br>
+							<br>
+							<input type="submit" value="Buscar" class="botonenv">
+						</form>
+			    	</div>
+			    	<button id="boton1">Ocultar Formulario</button>
+			    	<button id="boton2">Mostrar Formulario</button>
+		    	</div>
+		    	<div class="Cont">
+			    	<div class="formEm">
+						<form class="form2" onsubmit="return Valida2(this)">
+							<div class="form-header">
+								<h3 class="h3form">Buscar Sucursal</h3>
+							</div>
+							<label for="Sucursal" class="formlabel">Sucursal: </label><br>
+							<input type="text" id="Sucursal" name="Sucursal" placeholder="Nombre Sucursal"><br>
+							<br>
+							<input type="submit" value="Buscar" class="botonenv2">
+						</form>
+			    	</div>
+			    	<button id="boton3">Ocultar Formulario</button>
+			    	<button id="boton4">Mostrar Formulario</button>
+		    	</div>
 			</section>
 			<hr>
 			<footer>
@@ -45,6 +155,5 @@
 				</div>
 			</footer>
 		</article>
-	</center>
 </body>
 </html>
