@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="StyleEm.css">
+	<title>Sistema de Remuneraciones</title>
+	<script type="text/javascript" src="jquery331.js"></script>
+	<script>
+		$(document).ready(Principal);
+
+		function Principal(){
+			$("#ma").click(MostAFP);
+			$("#aa").click(MostInp);
+			$("#ana").click(AgreAFP);
+			$("#ea").click(MostEd);
+			$("#cat").click(EdiTas);
+		}
+
+		function MostAFP(){
+			$("#table").fadeToggle("fast");
+			$.ajax({
+				url: ("MuestraAFP.php"),
+				success: function(datos){
+					$("#table").html(datos);
+				}
+			});
+		}
+
+		function MostInp(){
+			$("#ingresar").fadeToggle("fast");
+		}
+
+		function AgreAFP(){
+			var nafp = document.getElementById('NomAfp').value;
+			var tafp = document.getElementById('Tasa').value;
+			$.ajax({
+				url: ("AgregaAfp.php?NomAfp="+nafp+"&Tasa="+tafp),
+				success: function(){
+					alert("AFP Registrada Correctamente");
+				}
+			});
+		}
+
+		function MostEd(){
+			$("#mod").fadeToggle("fast");
+		}
+
+		function EdiTas(){
+			var nutas = document.getElementById('Ntasa').value;
+			var noaf = document.getElementById('NomAf').value;
+
+			alert(noaf);
+			$.ajax({
+				url: ("EditaAfp.php?Ntasa="+nutas+"&NomAf="+noaf),
+				success: function(){
+					alert("Tasa Actualizada Correctamente");
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+	<div id="barra_menu">
+		<nav class="menu">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="cuenta.html">Archivo</a></li>
+			<li><a href="empresas.html">Empresas</a></li>
+		</ul>
+	</nav>
+	<nav class="salir">
+		<ul>
+			<li><a href="../index.html">Salir</a></li>
+		</ul>
+	</nav><br><br><br>
+	<p id="ContBtn">
+		<button id="ma">Mostrar AFP</button>
+		<button id="aa">Añadir AFP</button>
+		<button id="ea">Editar AFP</button>
+	</p>
+	<div id="ingresar" style="display: none;">
+		<form>
+			<fieldset><legend>Agregar Nueva AFP</legend>
+				Nombre AFP: <br>
+				<input type="text" name="NomAfp" id="NomAfp"><br>
+				Tasa AFP: <br>
+				<input type="text" name="Tasa" id="Tasa"><br>
+				<button id="ana">Agregar Nueva AFP</button>
+			</fieldset>
+		</form>
+	</div>
+
+	<div id="table" style="display: none;"></div>	
+
+	<div id="mod" style="display: none;">
+		<fieldset><legend>AFP a modificar</legend>
+			<input type="text" name="NomAf" id="NomAf">
+			<input type="text" name="Ntasa" id="Ntasa">
+			<button id="cat">Cambiar Tasa</button>
+		</fieldset>
+	</div>	
+</body>
+</html>
