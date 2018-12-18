@@ -11,7 +11,7 @@ while(true) {
 if ($user=="Gerente" && $passw=="gerente") {
 	$_SESSION['estado'] = "logeado";
 $_SESSION['nombre'] = "Sr. Administrador";
-header("Location: Gerente y modelo/index.html");  
+header("Location: Gerente_modelo/index.html");  
 	
 }
 else {
@@ -30,6 +30,15 @@ header("Location: inicio.php?error=Usuario+o+contraseña+inválida");  //redirec
 	$_SESSION['estado'] = "logeadoR";
 $_SESSION['nombre'] = "Sr. Administrador";
 header("Location: Juridico/index.html ");  
+	
+}
+else {
+header("Location: inicio.php?error=Usuario+o+contraseña+inválida");  //redirecciona al inicio enviando un msj de error como parámetro
+}
+	if ($user=="Informatica" && $passw=="informatica") {
+	$_SESSION['estado'] = "logeadoR";
+$_SESSION['nombre'] = "Sr. Administrador";
+header("Location: informatica/HomeInformatica.html ");  
 	
 }
 else {
