@@ -117,19 +117,13 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	#secc1, #secc1b, #secc1ba, #secc2, #secc2b, #secc3, #secc4, #secc1c{
+	#secc1, #secc1b, #secc1ba, #secc2b, #secc2, #secc1c{
 		text-align: left;
 		background-color: #fff;
 		height: 350px;
 	}
-	#secc2{
-		background-color: #C1C2C6;
-	}
 	#secc2b{
 		height: 800px;
-	}
-	#secc4{
-		background-color: #C1C2C6;
 	}
 	#secc1b, #secc1c{
 		height: 380px;
@@ -137,7 +131,7 @@
 	#secc1ba{
 		height: 1000px;
 	}
-	#s2d1, #s3d1, #s4d1, #s2d2, #s3d2, #s4d2{
+	#s2d1, #s2d2{
 		background-color: #E8E8E8;
 		width: 300px;
 		height: 300px;
@@ -147,7 +141,7 @@
 		margin-left: 24px;
 		margin-top: 24px;
 	}
-	#s2d2, #s3d2, #s4d2{
+	#s2d2{
 		width: 600px;
 		float: right;
 		margin-right: 24px;

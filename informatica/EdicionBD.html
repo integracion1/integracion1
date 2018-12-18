@@ -12,12 +12,6 @@
 			$("#botonBa").click(Enviar);
 		}
 		function Enviar(){
-			$(document).ajaxStart(function() {
-    			$("#cargando").text("Cargando datos...");
-			});
-			$(document).ajaxComplete(function() {
-    			$("#cargando").text("");
-			});
 			var cod = document.getElementById('code').value;
 			$.ajax({
 				url:("Modifica.php?code="+cod),
