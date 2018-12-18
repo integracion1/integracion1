@@ -170,7 +170,7 @@
       
       </article>
 
-      <aside> asd <hr>
+      <aside> Resultados<hr>
         <div id="tabla1"></div>
 
 
