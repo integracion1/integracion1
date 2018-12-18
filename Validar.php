@@ -20,7 +20,7 @@ header("Location: inicio.php?error=Usuario+o+contraseña+inválida");  //redirec
 if ($user=="RRHH" && $passw=="recursos") {
 	$_SESSION['estado'] = "logeadoR";
 $_SESSION['nombre'] = "Sr. Administrador";
-header("Location: RRHH/index.html");  
+header("Location: SISTEMA/index.html");  
 	
 }
 else {
